@@ -3,10 +3,13 @@ import SwiperCore, { Navigation } from "swiper";
 import Card from "@mui/material/Card";
 import "swiper/swiper-bundle.css";
 import { HomeCounter } from "./components";
-import IndividuumNavigationBar from "../../IndividuumComponents/NavigationBar";
-import LandingWallpaper from "../../IndividuumComponents/LandingWallpaper";
-
 import wallpaper from "../../assets/individuumImages/Home-Landing-Wallpaper.jpg";
+import {
+  Footer,
+  IndividuumNavigationBar,
+  LandingWallpaper,
+  SimpleSwiper,
+} from "../../IndividuumComponents";
 
 SwiperCore.use([Navigation]);
 const Home = () => (
@@ -25,12 +28,13 @@ const Home = () => (
       }}
     >
       <HomeCounter />
-      <div>Slider Section</div>
+      <SimpleSwiper />
       <div>About Us Section</div>
       <div>Our Doctors</div>
       <div>Our Services</div>
       <div>Contacts</div>
     </Card>
+    <Footer />
   </div>
 );
 
